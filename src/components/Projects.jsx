@@ -5,10 +5,6 @@ import { Trans, useTranslation } from 'react-i18next';
 const Projects = () => {
     const { t } = useTranslation();
 
-    const renderDescription = (key) => {
-        return ;
-    };
-
     const projects = [
         {
             id: 1,
@@ -29,7 +25,8 @@ const Projects = () => {
             id: 2,
             title: t("project.title2nd"),
             description: t("project.desc2nd"),
-            tags: ['JavaScript', 'Node', 'React', 'Tailwind']
+            tags: ['JavaScript', 'Node', 'React', 'Tailwind'],
+            link: "https://github.com/Andromede-59/Portfolio"
         },
         {
             id: 3,
@@ -43,8 +40,14 @@ const Projects = () => {
                     }} 
                 />
             ),
-            tags: ['JavaScript', 'Node', 'React', 'BootStrap']
+            tags: ['JavaScript', 'Node', 'React', 'BootStrap', 'CICD'],
         },
+        {
+            id: 4,
+            title: t("project.title4th"),
+            description: t("project.desc4th"),
+            tags: ['Python'],
+        }
     ];
 
     return (
@@ -55,7 +58,7 @@ const Projects = () => {
             {projects.map(project => (
                 <div key={project.id} className="border p-4 rounded-lg shadow-md">
                      <div className='flex flex-row items-center mb-2'>
-                        <h3 className="text-xl font-semibold" dangerouslySetInnerHTML={{ __html: project.title }}></h3>
+                        <h3 className="text-xl font-semibold titleH3" dangerouslySetInnerHTML={{ __html: project.title }}></h3>
                         {
                             project.link &&
                             <a href={project.link} target="_blank" rel="noopener noreferrer">
@@ -63,7 +66,7 @@ const Projects = () => {
                             </a>
                         }
                     </div>
-                    <p className="mb-4">{project.description}</p>
+                    <p className="mb-4 text-justify">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag, index) => (
                         <Tag key={index} label={tag} />

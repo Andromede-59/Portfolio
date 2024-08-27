@@ -1,1 +1,32 @@
-{}
+{
+    "about" : "About",
+    "aboutMe" : "About Me",
+    "projects" : "Projects",
+    "contact" : "Contact",
+    "name-grade" : "Julien MATTOT",
+    "academic-text" : "Currently a first-year Master's student in e-Services in Lille, I have been passionate about programming and technology since a young age. My academic journey and professional experiences have allowed me to develop strong skills in various programming languages and environments.",
+    "beginProg" : "I started programming by participating in competitions such as Algoréa and Prologin, which provided me with a solid introduction to the discipline. In 2023, I also took part in the Exolegend Hackathon, a robotics competition where I had the opportunity to work in C++.",
+    "internships" : "My professional experience includes several internships in companies, including a particularly notable one in software development at IANord. During this internship, I contributed to the development of new features for one of their applications, which enriched my technical expertise and development skills.",
+    "personnalProjects" : "Alongside my studies and professional experiences, I invest in personal projects to continue honing my skills. These projects reflect my commitment to practicing and exploring new technologies. You can view these achievements in the Projects tab.",
+    "project" : {
+        "title1st" : "Pandemic (Lord of the Rings version)",
+        "desc1st" : "Project carried out during the 2022-2023 school year in a pair in Java. The initial project was to reproduce the game Pandemic. The game was supposed to be simulated in the console, and the algorithm was always supposed to make a choice (often leading to defeat). We decided to enhance this game according to a shared passion: The Lord of the Rings. We therefore modified the class names according to the races of Tolkien's universe. Moreover, the 48 cities in the original game were adapted to the fantasy universe, using information consistent with the book. Additionally, we implemented a 3D graphical interface with the OpenGL library adapted to the universe.",
+        "title2nd" : "Portfolio",
+        "desc2nd" : "Updated my Portfolio to migrate it from PHP to React. The site is now faster and more dynamic. You can find the source code on my GitHub.",
+        "title3rd" : "BiblioBooks",
+        "desc3rd" : "My biggest project to date. It is a web-based library management site. The site allows you to manage books you have already read or wish to read. It features an interface resembling a physical library. It uses various APIs to retrieve book information (Google Books, OpenLibrary, etc.). You can find the site online at this address: <a href='https://bibliobooks.const-dev.fr' target='blank' rel='noopener noreferrer'><u>https://bibliobooks.const-dev.fr</u></a>. The project allowed me to learn how to manage large applications both on the backend and frontend, as well as the entire DevOps part for the site's deployment.",
+        "title4th" : "B-Tree",
+        "desc4th" : "Project completed in 2024 during the school year. The goal was to create a B-Tree in Python according to very specific rules regarding tree restructuring whenever a new value was added. Each node had to have a predefined number of keys at initialization and could have n+1 children."
+    },
+    "name" : "Name",
+    "email" : "Email",
+    "message" : "Message",
+    "send" : "Send",
+    "mailSent" : "Your message has been sent successfully!",
+    "mailError" : "An error occurred while sending your message. Please try again later.",
+    "alert" : {
+        "error" : "Error Encountered!",
+        "success" : "Operation Successful!"
+    },
+    "allRightsReserved" : "All Rights Reserved"
+}

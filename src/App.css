@@ -1,1 +1,9 @@
-
+@media screen and (max-width: 450px) {
+    .specificWidth {
+        flex-direction: column;
+    }
+    
+    .titleH3 {
+        width: 85%;
+    }
+}

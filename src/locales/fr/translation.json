@@ -14,6 +14,19 @@
         "title2nd" : "Portfolio",
         "desc2nd" : "Mise à jour de mon Portfolio pour le migrer de PHP à React. Le site est maintenant plus rapide et plus dynamique. Vous pouvez retrouver le code source sur mon GitHub.",
         "title3rd" : "BiblioBooks",
-        "desc3rd" : "Mon plus gros projet à ce jour. Il s'agit d'un site web de gestion de bibliothèque. Le site permet de gérer les livres qu'on a déjà lu où qu'on souhaite lire. Il possède une interface ressemblant à une bibliothèque physique. Il utilise différentes APIs pour récupérer les informations des livres (Google Books, OpenLibrary, etc.). Vous pouvez retrouve le site en ligne à cette addresse : <a href='https://bibliobooks.const-dev.fr' target='blank' rel='noopener noreferrer'><u>https://bibliobooks.const-dev.fr<u></a>."
-    }
+        "desc3rd" : "Mon plus gros projet à ce jour. Il s'agit d'un site web de gestion de bibliothèque. Le site permet de gérer les livres qu'on a déjà lu où qu'on souhaite lire. Il possède une interface ressemblant à une bibliothèque physique. Il utilise différentes APIs pour récupérer les informations des livres (Google Books, OpenLibrary, etc.). Vous pouvez retrouve le site en ligne à cette addresse : <a href='https://bibliobooks.const-dev.fr' target='blank' rel='noopener noreferrer'><u>https://bibliobooks.const-dev.fr</u></a>. Le projet m'a permis d'apprendre à gérer de grosses applications tant en backend qu'en frontend ainsi que toute la partie devOps pour le déploiement du site.",
+        "title4th" : "Arbre B (B-Tree)",
+        "desc4th" : "Projet réalisé en 2024 durant l'année scolaire. Le but était de réaliser un arbre B en python selon des règles très spécifiques concernant le remaniement de l'arbre dès qu'une nouvelle valeur était ajoutée. Chaque noeud devait possèder un nombre de clé défini à l'initialisation et pouvait posséder n+1 enfants."
+    },
+    "name" : "Nom",
+    "email" : "Email",
+    "message" : "Message",
+    "send" : "Envoyer",
+    "mailSent" : "Votre message a bien été envoyé !",
+    "mailError" : "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard.",
+    "alert" : {
+        "error" : "Erreur Rencontrée !",
+        "success" : "Opération Réussie !"
+    },
+    "allRightsReserved" : "Tous droits réservés"
 }
