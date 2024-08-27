@@ -53,7 +53,7 @@ const Projects = () => {
     return (
         <section id="projects" className="bg-white p-8">
         <div className="container mx-auto">
-            <h2 className="text-3xl font-bold m-4">{t("projects")}</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("projects")}</h2>
             <div className="space-y-6">
             {projects.map(project => (
                 <div key={project.id} className="border p-4 rounded-lg shadow-md">
