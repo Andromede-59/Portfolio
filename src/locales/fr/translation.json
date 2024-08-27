@@ -1,0 +1,19 @@
+{
+    "about" : "À propos",
+    "aboutMe" : "À propos de moi",
+    "projects" : "Projets",
+    "contact" : "Contact",
+    "name-grade" : "Julien MATTOT",
+    "academic-text" : "Actuellement étudiant en première année de Master e-Services à Lille, je suis passionné par la programmation et la technologie depuis mon jeune âge. Mon parcours académique et mes expériences professionnelles m'ont permis de développer des compétences solides dans divers langages et environnements de programmation.",
+    "beginProg" : "J'ai débuté dans la programmation en participant à des concours tels qu'Algoréa et Prologin, qui m'ont offert une solide introduction à la discipline. En 2023, j'ai également pris part au Hackathon Exolegend, un concours de robotique où j'ai eu l'occasion de travailler en C++.",
+    "internships" : "Mon expérience professionnelle inclut plusieurs stages en entreprise, dont un particulièrement notable en développement logiciel chez IANord. Durant ce stage, j'ai contribué au développement de nouvelles fonctionnalités pour l'une de leurs applications, ce qui a enrichi mon savoir-faire technique et mes compétences en développement.",
+    "personnalProjects" : "En parallèle de mes études et de mes expériences professionnelles, je m'investis dans des projets personnels pour continuer à affiner mes compétences. Ces projets reflètent mon engagement à pratiquer et à explorer de nouvelles technologies. Vous pouvez consulter ces réalisations dans l'onglet Projets.",
+    "project" : {
+        "title1st" : "Pandemic (version seigneur des anneaux)",
+        "desc1st" : "Projet réalisé durant l'année scolaire 2022-2023 en binôme en Java. Le projet initial était de reproduire le jeu Pandemic. Le jeu était supposé être simulé dans la console et l'agorithme devait toujours faire un choix (souvent qui amène à la défaite).Nous avons décidé d'améliorer ce jeu selon une passion commune : Le Seigneur des Anneaux. Nous avons donc modifier le nom des classes selon les races de l'univers de Tolkien. De plus, les 48 villes dans le jeu initial ont été adaptées à l'univers fantastique en reprenant des informations conformes au livre. De plus, nous avons implanté une interface graphique 3D avec la librairie OpenGL adapté à l'univers.",
+        "title2nd" : "Portfolio",
+        "desc2nd" : "Mise à jour de mon Portfolio pour le migrer de PHP à React. Le site est maintenant plus rapide et plus dynamique. Vous pouvez retrouver le code source sur mon GitHub.",
+        "title3rd" : "BiblioBooks",
+        "desc3rd" : "Mon plus gros projet à ce jour. Il s'agit d'un site web de gestion de bibliothèque. Le site permet de gérer les livres qu'on a déjà lu où qu'on souhaite lire. Il possède une interface ressemblant à une bibliothèque physique. Il utilise différentes APIs pour récupérer les informations des livres (Google Books, OpenLibrary, etc.). Vous pouvez retrouve le site en ligne à cette addresse : <a href='https://bibliobooks.const-dev.fr' target='blank' rel='noopener noreferrer'><u>https://bibliobooks.const-dev.fr<u></a>."
+    }
+}

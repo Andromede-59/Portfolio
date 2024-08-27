@@ -6,7 +6,9 @@ const Tag = ({ label }) => {
     React: 'bg-blue-500 text-white',
     Node: 'bg-green-500 text-white',
     Python: 'bg-blue-600 text-white',
-    Django: 'bg-green-700 text-white'
+    BootStrap: 'bg-green-700 text-white',
+    Java : 'bg-red-500 text-white',
+    Tailwind : 'bg-blue-400 text-white',
   };
 
   return (
