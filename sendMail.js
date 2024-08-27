@@ -10,6 +10,10 @@ const sendEmail = async (name, email, message) => {
         },
     });
 
+    if(message.includes("http") || message.includes("www")) {
+        return false;
+    }
+
     let mailOptions = {
         from: `"${name}" <${email}>`,
         to: "julien.mattot@gmail.com",

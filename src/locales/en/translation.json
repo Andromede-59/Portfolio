@@ -28,5 +28,10 @@
         "error" : "Error Encountered!",
         "success" : "Operation Successful!"
     },
-    "allRightsReserved" : "All Rights Reserved"
+    "allRightsReserved" : "All Rights Reserved",
+    "placeholder" : {
+        "name" : "Enter your name",
+        "email" : "Enter your email",
+        "message" : "Enter your message (all messages with links will be ignored)"
+    }
 }

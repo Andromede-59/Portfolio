@@ -19,10 +19,13 @@ app.get('*', (req, res) => {
   	res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.post('/api/sendMail', upload.none(), (req, res) => {
+app.post('/api/sendMail', upload.none(), async (req, res) => {
 	try {
 		const { name, email, message } = req.body;
-		sendEmail(name, email, message);
+		const emailSent = await sendEmail(name, email, message);
+		if (!emailSent) {
+			return res.status(500).send('Error sending email');
+		}
 		res.status(200).send('Email sent');
 	}
 	catch (error) {

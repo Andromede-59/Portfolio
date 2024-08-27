@@ -43,15 +43,15 @@ const Contact = ({setAlert, setTypeAlert}) => {
 				<form className="max-w-lg mx-auto" onSubmit={handleSendMail}>
 					<div className="mb-4">
 						<label className="block text-sm font-medium mb-2" htmlFor="name">{t("name")}</label>
-						<input type="text" id="name" name="name" className="w-full p-2 border border-gray-300 rounded" onChange={(e) => setName(e.target.value)} required />
+						<input type="text" id="name" name="name" className="w-full p-2 border border-gray-300 rounded" placeholder={t("placeholder.name")} onChange={(e) => setName(e.target.value)} required />
 					</div>
 					<div className="mb-4">
 						<label className="block text-sm font-medium mb-2" htmlFor="email">{t("email")}</label>
-						<input type="email" id="email" name="email" className="w-full p-2 border border-gray-300 rounded" onChange={(e) => setEmail(e.target.value)} required />
+						<input type="email" id="email" name="email" className="w-full p-2 border border-gray-300 rounded" placeholder={t("placeholder.email")} onChange={(e) => setEmail(e.target.value)} required />
 					</div>
 					<div className="mb-4">
 						<label className="block text-sm font-medium mb-2" htmlFor="message">{t("message")}</label>
-						<textarea id="message" name="message" className="w-full p-2 border border-gray-300 rounded" rows="4" onChange={(e) => setMsg(e.target.value)} required></textarea>
+						<textarea id="message" name="message" className="w-full p-2 border border-gray-300 rounded" rows="4" placeholder={t("placeholder.message")} onChange={(e) => setMsg(e.target.value)} required></textarea>
 					</div>
 					<button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" disabled={!name || !email || !msg}>{t("send")}</button>
 				</form>
