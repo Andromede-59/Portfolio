@@ -47,6 +47,13 @@ const Projects = () => {
             title: t("project.title4th"),
             description: t("project.desc4th"),
             tags: ['Python'],
+        },
+        {
+            id: 5,
+            title: t("project.title5th"),
+            description: t("project.desc5th"),
+            tags: ['JavaScript'],
+            link: "https://github.com/Andromede-59/II2D_Projet_final"
         }
     ];
 

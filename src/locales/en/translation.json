@@ -16,7 +16,9 @@
         "title3rd" : "BiblioBooks",
         "desc3rd" : "My biggest project to date. It is a web-based library management site. The site allows you to manage books you have already read or wish to read. It features an interface resembling a physical library. It uses various APIs to retrieve book information (Google Books, OpenLibrary, etc.). You can find the site online at this address: <a href='https://bibliobooks.const-dev.fr' target='blank' rel='noopener noreferrer'><u>https://bibliobooks.const-dev.fr</u></a>. The project allowed me to learn how to manage large applications both on the backend and frontend, as well as the entire DevOps part for the site's deployment.",
         "title4th" : "B-Tree",
-        "desc4th" : "Project completed in 2024 during the school year. The goal was to create a B-Tree in Python according to very specific rules regarding tree restructuring whenever a new value was added. Each node had to have a predefined number of keys at initialization and could have n+1 children."
+        "desc4th" : "Project completed in 2024 during the school year. The goal was to create a B-Tree in Python according to very specific rules regarding tree restructuring whenever a new value was added. Each node had to have a predefined number of keys at initialization and could have n+1 children.",
+        "title5th" : "Particle Generator",
+        "desc5th" : "Project completed in 2024 during the school year. The goal was to create a particle generator in JavaScript. The generator had to be configurable and allow the generation of particles of different colors that responded to terrestrial physics (bouncing on collisions, acceleration due to gravity, etc.)."
     },
     "name" : "Name",
     "email" : "Email",
