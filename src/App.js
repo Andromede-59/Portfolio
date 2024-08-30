@@ -11,7 +11,7 @@ import './App.css';
 const App = () => {
 	const [alert, setAlert] = React.useState("");
 	const [typeAlert, setTypeAlert] = React.useState('');
-
+	console.log("page on");
 	return (
 		<div>
 			<Header />
