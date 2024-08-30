@@ -8,7 +8,7 @@ const multer = require('multer');
 const app = express();
 const port = 3000;
 
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'build')));
