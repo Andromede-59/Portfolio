@@ -69,7 +69,7 @@ const Projects = () => {
                         {
                             project.link &&
                             <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                <img style={{height:"30px", width:"30px", marginLeft:"5px"}} src='http://cws800wsk4g8ccsosccgcgk4.92.113.27.135.sslip.io/images/githubLogo.png'/>
+                                <img style={{height:"30px", width:"30px", marginLeft:"5px"}} src='https://cdn.const-dev.fr/images/githubLogo.png'/>
                             </a>
                         }
                     </div>

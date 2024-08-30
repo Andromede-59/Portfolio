@@ -23,9 +23,9 @@ const Alert = ({ type, message }) => {
             <div className="flex align-items-center">
                 <div className="me-3 img-width">
                     {type === 'ERROR' ? (
-                        <img src='http://cws800wsk4g8ccsosccgcgk4.92.113.27.135.sslip.io/images/error.png' alt='error' />
+                        <img src='https://cdn.const-dev.fr/images/error.png' alt='error' />
                     ) : (
-                        <img src='http://cws800wsk4g8ccsosccgcgk4.92.113.27.135.sslip.io/images/valide.png' alt='success' />
+                        <img src='https://cdn.const-dev.fr/images/valide.png' alt='success' />
                     )}
                 </div>
                 <div>
