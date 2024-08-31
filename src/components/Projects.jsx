@@ -1,7 +1,6 @@
 import React from 'react';
 import Tag from './Tag';
 import { Trans, useTranslation } from 'react-i18next';
-import { link } from '../../server';
 
 const Projects = () => {
     const { t } = useTranslation();

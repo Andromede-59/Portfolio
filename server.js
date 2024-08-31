@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 	res.status(200).send('Healthcheck passed');
 });
 
+app.get("/sitemap.xml", (req, res) => {
+	res.sendFile(path.join(__dirname, "sitemap.xml"));
+});
+
 app.get('*', (req, res) => {
   	res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });

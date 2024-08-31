@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /admin/
+Disallow: /private/
 Allow: /
-
-Sitemap: https://const-dev.fr/sitemap.xml
+Sitemap: https://portoflio.const-dev.fr/sitemap.xml
