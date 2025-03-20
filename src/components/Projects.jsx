@@ -9,15 +9,7 @@ const Projects = () => {
         {
             id: 1,
             title: t("project.title1st"),
-            description: (
-                <Trans 
-                    i18nKey="project.desc1st"
-                    components={{ 
-                        a: <a />,
-                        u : <u />,
-                    }} 
-                />
-            ),
+            description: (t("project.desc1st")),
             tags: ['Java'],
             link : "https://github.com/Lucas-Zanardo/University-LOTRPandemic"
         },
@@ -76,8 +68,8 @@ const Projects = () => {
                         <h3 className="text-xl font-semibold titleH3" dangerouslySetInnerHTML={{ __html: project.title }}></h3>
                         {
                             project.link &&
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                <img style={{height:"30px", width:"30px", marginLeft:"5px"}} src='https://cdn.const-dev.fr/images/githubLogo.png'/>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository link" >
+                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='https://cdn.const-dev.fr/images/githubLogo.png'/>
                             </a>
                         }
                     </div>
