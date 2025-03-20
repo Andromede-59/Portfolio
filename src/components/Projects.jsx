@@ -27,8 +27,7 @@ const Projects = () => {
                 <Trans 
                     i18nKey="project.desc3rd"
                     components={{ 
-                        a: <a />,
-                        u : <u />,
+                        a: <a href="https://bookera.const-dev.fr" target="_blank" rel="noopener noreferrer" className="underline">bookera.const-dev.fr</a>, 
                     }} 
                 />
             ),
