@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="bg-gray-800 text-white p-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="text-center md:text-left">
-                    <p>&copy; 2024 Julien MATTOT. {t("allRightsReserved")}</p>
+                    <p>&copy; {(new Date).getFullYear()} Julien MATTOT. {t("allRightsReserved")}</p>
                 </div>
                 <div className="flex space-x-4 mt-4 md:mt-0">
                     <a 
@@ -28,10 +28,10 @@ const Footer = () => {
                         GitHub
                     </a>
                     <a 
-                        href="mailto:julien.mattot@gmail.com" 
+                        href="mailto:julien.mattot@protonmail.com" 
                         className="text-blue-400 hover:underline"
                     >
-                        julien.mattot@gmail.com
+                        julien.mattot@protonmail.com
                     </a>
                 </div>
             </div>

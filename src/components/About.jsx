@@ -9,8 +9,11 @@ const About = () => {
         <div className="container mx-auto text-justify">
             <h2 className="text-3xl font-bold mb-4">{t("aboutMe")}</h2>
             <p className="text-lg">{t("academic-text")}</p>
+            <br/>
             <p className="text-lg">{t("beginProg")}</p>
+            <br/>
             <p className="text-lg">{t("internships")}</p>
+            <br/>
             <p className="text-lg">{t("personnalProjects")}</p>
         </div>
         </section>

@@ -55,6 +55,13 @@ const Projects = () => {
             description: t("project.desc5th"),
             tags: ['JavaScript'],
             link: "https://github.com/Andromede-59/II2D_Projet_final"
+        }, 
+        {
+            id: 6,
+            title: t("project.title6th"),
+            description: t("project.desc6th"),
+            tags: ['Java', 'Maven'],
+            link: "https://github.com/Andromede-59/FTPServer"
         }
     ];
 

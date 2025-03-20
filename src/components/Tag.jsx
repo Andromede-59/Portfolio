@@ -10,6 +10,7 @@ const Tag = ({ label }) => {
     Java : 'bg-red-500 text-white',
     Tailwind : 'bg-blue-400 text-white',
     CICD : 'bg-gray-400 text-white',
+    Maven : 'bg-red-400 text-white',
   };
 
   return (
