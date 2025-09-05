@@ -6,33 +6,53 @@ const Contact = ({setAlert, setTypeAlert}) => {
 	const [name, setName] = React.useState('');
 	const [email, setEmail] = React.useState('');
 	const [msg, setMsg] = React.useState('');
+	const [isLoading, setIsLoading] = React.useState(false);
 
 	const handleSendMail = async (e) => {
 		e.preventDefault();
+		setIsLoading(true);
+		
 		const form = e.target;
 		const data = new FormData(form);
-		const response = await fetch('/api/sendMail', {
-			method: 'POST',
-			body: data,
-			headers: {
-				'Accept': 'application/json'
+		
+		try {
+			const response = await fetch('/api/sendMail', {
+				method: 'POST',
+				body: data,
+				headers: {
+					'Accept': 'application/json'
+				}
+			});
+			
+			if (response.ok) {
+				setAlert(t("mailSent"));
+				setTypeAlert('SUCCESS');
+				setTimeout(() => {
+					setAlert("");
+					setTypeAlert("");
+				}, 4000);
+				form.reset();
+				// Réinitialiser les états
+				setName('');
+				setEmail('');
+				setMsg('');
+			} else {
+				setAlert(t("mailError"));
+				setTypeAlert('ERROR');
+				setTimeout(() => {
+					setAlert("");
+					setTypeAlert("");
+				}, 4000);
 			}
-		});
-		if (response.ok) {
-			setAlert(t("mailSent"));
-			setTypeAlert('SUCCESS');
-			setTimeout(() => {
-				setAlert("");
-				setTypeAlert("");
-			}, 4000);
-			form.reset();
-		} else {
+		} catch (error) {
 			setAlert(t("mailError"));
 			setTypeAlert('ERROR');
 			setTimeout(() => {
 				setAlert("");
 				setTypeAlert("");
 			}, 4000);
+		} finally {
+			setIsLoading(false);
 		}
 	};
 
@@ -53,7 +73,15 @@ const Contact = ({setAlert, setTypeAlert}) => {
 						<label className="block text-sm font-medium mb-2" htmlFor="message">{t("message")}</label>
 						<textarea id="message" name="message" className="w-full p-2 border border-gray-300 rounded" rows="4" placeholder={t("placeholder.message")} onChange={(e) => setMsg(e.target.value)} required></textarea>
 					</div>
-					<button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" disabled={!name || !email || !msg}>{t("send")}</button>
+					<button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" disabled={!name || !email || !msg || isLoading}>
+						{isLoading ? (
+							<span className="flex items-center justify-center gap-2">
+								<span className="loader"></span>
+							</span>
+						) : (
+							t("send")
+						)}
+					</button>
 				</form>
 			</div>
 		</section>
