@@ -53,6 +53,13 @@ const Projects = () => {
             description: t("project.desc6th"),
             tags: ['Java', 'Maven'],
             link: "https://github.com/Andromede-59/FTPServer"
+        },
+        {
+            id: 7,
+            title: t("project.title7th"),
+            description: t("project.desc7th"),
+            tags: ['JavaScript', 'Node', 'Rust', 'Kotlin'],
+            // playstoreLink : "https://play.google.com/store/apps/details?id=constdev.bookadviser&hl=fr&gl=US",
         }
     ];
 
@@ -69,6 +76,12 @@ const Projects = () => {
                             project.link &&
                             <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository link" >
                                 <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='https://cdn.const-dev.fr/images/githubLogo.png'/>
+                            </a>
+                        }
+                        {
+                            project.playstoreLink &&
+                            <a href={project.playstoreLink} target="_blank" rel="noopener noreferrer" aria-label="Play Store link" >
+                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='https://cdn.const-dev.fr/images/Logo/playstore.png'/>
                             </a>
                         }
                     </div>

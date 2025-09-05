@@ -11,6 +11,8 @@ const Tag = ({ label }) => {
     Tailwind : 'bg-blue-400 text-white',
     CICD : 'bg-gray-400 text-white',
     Maven : 'bg-red-400 text-white',
+    Kotlin : 'bg-purple-500 text-white',
+    Rust : 'bg-orange-500 text-white',
   };
 
   return (
