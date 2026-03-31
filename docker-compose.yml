@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  portfolio:
+    build: .
+    container_name: portfolio
+    restart: unless-stopped
+    environment:
+      - EMAIL=${EMAIL}
+      - PASSWORD_EMAIL=${PASSWORD_EMAIL}
+      - PORT=${PORT}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`portfolio.const-dev.fr`)"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
+
+networks:
+  public_net:
+    external: true

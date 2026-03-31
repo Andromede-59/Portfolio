@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 const upload = multer();
 
@@ -25,8 +25,8 @@ app.get("/sitemap.xml", (req, res) => {
 	res.sendFile(path.join(__dirname, "sitemap.xml"));
 });
 
-app.get('*', (req, res) => {
-  	res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get(/.*/, (req, res) => {
+  	res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.post('/api/sendMail', upload.none(), async (req, res) => {
@@ -44,8 +44,6 @@ app.post('/api/sendMail', upload.none(), async (req, res) => {
 	}
 });
 
-app.listen( port => {
-	console.log(`Server is running on port ${process.env.PORT}`);
-});
+// The HTTP server is started by `bin/www`.
 
 module.exports = app;
