@@ -12,8 +12,9 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 COPY --from=build /app/server.js ./server.js
-COPY --from=build /app/sendMail.js ./sendMail.js
 COPY --from=build /app/dist ./dist
+COPY --from=build /app/sendMail.js ./sendMail.js
+COPY --from=build /app/bin ./bin
 
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD ["node", "./bin/www"]
