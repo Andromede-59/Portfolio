@@ -15,6 +15,9 @@ COPY --from=build /app/server.js ./server.js
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/sendMail.js ./sendMail.js
 COPY --from=build /app/bin ./bin
+COPY --from=build /app/build ./build
 
 EXPOSE 3000
+RUN sh -c "if [ -d build ] && [ ! -d dist ]; then mv build dist; fi"
+
 CMD ["node", "./bin/www"]
