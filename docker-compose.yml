@@ -13,6 +13,8 @@ services:
       - "traefik.http.routers.portfolio.rule=Host(`portfolio.const-dev.fr`)"
       - "traefik.http.routers.portfolio.entrypoints=web"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
+    networks:
+      - public_net
 
 networks:
   public_net:
