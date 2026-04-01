@@ -75,13 +75,13 @@ const Projects = () => {
                         {
                             project.link &&
                             <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository link" >
-                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='src/assets/githubLogo.png'/>
+                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='assets/githubLogo.png'/>
                             </a>
                         }
                         {
                             project.playstoreLink &&
                             <a href={project.playstoreLink} target="_blank" rel="noopener noreferrer" aria-label="Play Store link" >
-                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='src/assets/playstore.png'/>
+                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='assets/playstore.png'/>
                             </a>
                         }
                     </div>
