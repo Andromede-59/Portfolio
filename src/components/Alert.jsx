@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import './Alert.css'; // Import custom CSS for positioning and animation
 import { useTranslation } from "react-i18next";
+import errorIcon from '../assets/error.png';
+import successIcon from '../assets/valide.png';
 
 const Alert = ({ type, message }) => {
     const [showAlert, setShowAlert] = useState(true);
@@ -23,9 +25,9 @@ const Alert = ({ type, message }) => {
             <div className="flex align-items-center">
                 <div className="me-3 img-width">
                     {type === 'ERROR' ? (
-                        <img src='assets/error.png' alt='error' />
+                        <img src={errorIcon} alt='error' />
                     ) : (
-                        <img src='assets/valide.png' alt='success' />
+                        <img src={successIcon} alt='success' />
                     )}
                 </div>
                 <div>

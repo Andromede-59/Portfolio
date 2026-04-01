@@ -1,6 +1,8 @@
 import React from 'react';
 import Tag from './Tag';
 import { Trans, useTranslation } from 'react-i18next';
+import githubLogo from '../assets/githubLogo.png';
+import playstoreLogo from '../assets/playstore.png';
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -75,13 +77,13 @@ const Projects = () => {
                         {
                             project.link &&
                             <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository link" >
-                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='assets/githubLogo.png'/>
+                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src={githubLogo}/>
                             </a>
                         }
                         {
                             project.playstoreLink &&
                             <a href={project.playstoreLink} target="_blank" rel="noopener noreferrer" aria-label="Play Store link" >
-                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src='assets/playstore.png'/>
+                                <img alt="" style={{height:"30px", width:"30px", marginLeft:"5px"}} src={playstoreLogo}/>
                             </a>
                         }
                     </div>
