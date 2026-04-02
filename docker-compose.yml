@@ -3,7 +3,7 @@ services:
   portfolio:
     build: .
     container_name: portfolio
-    restart: unless-stopped
+    restart: always
     environment:
       - EMAIL=${EMAIL}
       - PASSWORD_EMAIL=${PASSWORD_EMAIL}
