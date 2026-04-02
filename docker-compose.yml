@@ -3,7 +3,7 @@ services:
   portfolio:
     build: .
     container_name: portfolio
-    restart: awlays
+    restart: always
     environment:
       - EMAIL=${EMAIL}
       - PASSWORD_EMAIL=${PASSWORD_EMAIL}
