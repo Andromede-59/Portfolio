@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /private/
 Allow: /
-Sitemap: https://portoflio.const-dev.fr/sitemap.xml
+Sitemap: https://portfolio.const-dev.fr/sitemap.xml
