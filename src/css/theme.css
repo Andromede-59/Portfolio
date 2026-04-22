@@ -181,6 +181,15 @@
   }
 }
 
+@keyframes ring-focus {
+    from {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+    to {
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5);
+    }
+}
+
 @layer utilities {
     .border-border {
         border-color: var(--border);
@@ -196,5 +205,9 @@
     }
     .bg-background {
         background: 'var(--background)';
+    }
+    .focus-ring-animate:focus {
+        outline: none;
+        animation: ring-focus 0.6s ease-out forwards;
     }
 }
