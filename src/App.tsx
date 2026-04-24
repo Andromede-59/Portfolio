@@ -17,11 +17,32 @@ export default function App() {
 
   const [selectedCategory, setSelectedCategory] = useState<FilterCategory>('all');
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+
+    // Création du FormData pour correspondre à upload.none() côté serveur
+    const data = new FormData();
+    data.append('name', formData.name);
+    data.append('email', formData.email);
+    data.append('message', formData.message);
+
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        body: data, // On envoie le FormData directement (pas de JSON.stringify)
+        // Note : Ne pas mettre de Header 'Content-Type', le navigateur le fait seul pour le FormData
+      });
+
+      if (response.ok) {
+        alert('Message envoyé avec succès !');
+        // Optionnel : reset du formulaire après envoi
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert("Erreur lors de l'envoi.");
+      }
+    } catch (error) {
+      console.error("Erreur réseau :", error);
+    }
   };
 
   const scrollToSection = (id: string) => {

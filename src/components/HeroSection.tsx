@@ -1,5 +1,5 @@
 import React from 'react';
-import imageDeveloper from '../assets/image_developer.png';
+import imageDeveloper from '../assets/image_developer.webp';
 
 type HeroSectionProps = {
   onViewProjects: () => void;
@@ -37,13 +37,13 @@ export default function HeroSection({ onViewProjects, onContact }: HeroSectionPr
                 onClick={onViewProjects}
                 className="px-6 sm:px-8 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all font-medium"
               >
-                View projects
+                Voir mes projets
               </button>
               <button
                 onClick={onContact}
                 className="px-6 sm:px-8 py-3 border border-border text-foreground rounded-lg hover:border-primary hover:bg-primary/5 transition-all font-medium"
               >
-                Contact me
+                Me contacter
               </button>
             </div>
           </div>
@@ -53,6 +53,9 @@ export default function HeroSection({ onViewProjects, onContact }: HeroSectionPr
             <img
               src={imageDeveloper}
               alt="Developer working at desk illustration"
+              width={400}
+              height={400}
+              fetchPriority="high" 
               className="w-full h-auto"
             />
           </div>

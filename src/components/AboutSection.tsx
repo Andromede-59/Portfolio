@@ -1,6 +1,6 @@
 import React from 'react';
-import myAvatar from '../assets/myAvatar.jpeg';
-import generixLogo from '../assets/generix_logo.jpeg';
+import myAvatar from '../assets/myAvatar.webp';
+import generixLogo from '../assets/generix_logo.webp';
 
 export default function AboutSection() {
   return (
@@ -42,12 +42,22 @@ export default function AboutSection() {
                 <img
                   src={myAvatar}
                   alt="Julien Mattot"
+                  width={256}
+                  height={256}
+                  fetchPriority="high"
                   className="w-full h-full object-cover object-[50%_25%]"
                 />
               </div>
             </div>
             <div className="absolute -bottom-3 right-4 md:bottom-2 md:right-2 bg-card border-2 border-primary rounded-full overflow-hidden shadow-lg w-16 h-16">
-              <img src={generixLogo} alt="Generix Logo" className="w-full h-full object-cover block" />
+              <img 
+                src={generixLogo}
+                alt="Generix Logo" 
+                width={64} 
+                height={64} 
+                fetchPriority="high"
+                className="w-full h-full object-cover block" 
+              />
             </div>
           </div>
         </div>

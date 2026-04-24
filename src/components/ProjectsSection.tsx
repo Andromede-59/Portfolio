@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import githubLogo from '../assets/githubLogo.png';
+import githubLogo from '../assets/githubLogo.webp';
 import type { FilterCategory, Project } from '../data/projects';
 
 type ProjectsSectionProps = {
@@ -92,7 +92,7 @@ export default function ProjectsSection({ projects, selectedCategory, onSelectCa
                       className="text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
                       aria-label="Open project link"
                     >
-                      <img src={githubLogo} alt="GitHub" className="w-5 h-5 sm:w-6 sm:h-6 object-contain brightness-125 invert opacity-70 transition-all duration-200 hover:scale-110 hover:opacity-100 hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.85)]" />
+                      <img src={githubLogo} alt="View project on GitHub" width={24} height={24} fetchPriority="high" className="w-5 h-5 sm:w-6 sm:h-6 object-contain brightness-125 invert opacity-70 transition-all duration-200 hover:scale-110 hover:opacity-100 hover:drop-shadow-[0_0_8px_rgba(99,102,241,0.85)]" />
                     </a>
                   ) : null}
                 </div>

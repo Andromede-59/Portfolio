@@ -8,8 +8,8 @@ type NavigationProps = {
 
 export default function Navigation({ onAboutClick, onProjectsClick, onContactClick }: NavigationProps) {
   const navItems = [
-    { label: 'About', onClick: onAboutClick },
-    { label: 'Projects', onClick: onProjectsClick },
+    { label: 'À propos', onClick: onAboutClick },
+    { label: 'Projets', onClick: onProjectsClick },
     { label: 'Contact', onClick: onContactClick }
   ];
 

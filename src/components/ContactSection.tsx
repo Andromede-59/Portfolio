@@ -12,6 +12,7 @@ type ContactSectionProps = {
   onSubmit: (e: FormEvent) => void;
 };
 
+
 export default function ContactSection({ formData, onChangeField, onSubmit }: ContactSectionProps) {
   return (
     <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 relative">
@@ -56,10 +57,13 @@ export default function ContactSection({ formData, onChangeField, onSubmit }: Co
               <input
                 type="text"
                 id="name"
+                name='name'
+                autoComplete='name'
                 required
                 value={formData.name}
                 onChange={(e) => onChangeField('name', e.target.value)}
                 className="focus-ring-animate w-full px-4 py-3 bg-slate-900 border border-border rounded-lg focus:border-primary transition-all text-foreground"
+                placeholder='Votre nom'
               />
             </div>
             <div>
@@ -67,21 +71,26 @@ export default function ContactSection({ formData, onChangeField, onSubmit }: Co
               <input
                 type="email"
                 id="email"
+                name='email'
+                autoComplete='email'
                 required
                 value={formData.email}
                 onChange={(e) => onChangeField('email', e.target.value)}
                 className="focus-ring-animate w-full px-4 py-3 bg-slate-900 border border-border rounded-lg focus:border-primary transition-all text-foreground"
+                placeholder='Votre email'
               />
             </div>
             <div>
               <label htmlFor="message" className="block text-foreground mb-2">Message</label>
               <textarea
                 id="message"
+                name='message'
                 required
                 rows={5}
                 value={formData.message}
                 onChange={(e) => onChangeField('message', e.target.value)}
                 className="focus-ring-animate w-full px-4 py-3 bg-slate-900 border border-border rounded-lg focus:border-primary transition-all resize-none text-foreground"
+                placeholder='Votre message'
               />
             </div>
             <button
