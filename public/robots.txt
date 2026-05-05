@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /private/
+Disallow: /projects/
 Allow: /
-Sitemap: https://portfolio.const-dev.fr/sitemap.xml
+Sitemap: https://julien.mattot.fr/sitemap.xml

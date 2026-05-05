@@ -60,6 +60,29 @@ export default function ProjectPage() {
     };
   }, [project]);
 
+  React.useEffect(() => {
+    const previousRobots = document.querySelector('meta[name="robots"]')?.getAttribute('content');
+    const robotsTag = document.querySelector('meta[name="robots"]');
+    if (robotsTag) {
+      robotsTag.setAttribute('content', 'noindex, nofollow');
+    }
+
+    const previousCanonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
+    const canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (canonicalTag) {
+      canonicalTag.setAttribute('href', 'https://julien.mattot.fr/');
+    }
+
+    return () => {
+      if (robotsTag && previousRobots) {
+        robotsTag.setAttribute('content', previousRobots);
+      }
+      if (canonicalTag && previousCanonical) {
+        canonicalTag.setAttribute('href', previousCanonical);
+      }
+    };
+  }, []);
+
   return (
     <div className="bg-background min-h-screen relative overflow-hidden">
       <BackgroundEffects />
