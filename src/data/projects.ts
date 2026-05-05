@@ -16,35 +16,34 @@ export interface ProjectDetails {
 export const projects: ProjectDetails[] = [
   {
     title: 'BookAdviser',
-    description: "Application Android de découverte de livres avec un backend haute performance en Rust et ExpressJS.",
-    fullDescription: "BookAdviser est un projet d'envergure mené sur l'année 2025. Il s'agit d'un écosystème complet comprenant une application mobile native et une API hybride. L'objectif est de proposer des recommandations de lecture ultra-personnalisées en analysant la proximité sémantique et thématique entre les ouvrages.",
-    technologies: ['Kotlin', 'Rust', 'Node', 'Jetpack Compose', 'ExpressJS'],
-    link: 'https://github.com/Andromede-59',
+    description: "Application Android de découverte de livres basée sur les centres d'intérêt, avec une API développée en ExpressJS.",
+    fullDescription: "Projet mené sur l'année 2025. BookAdviser est une application Android qui aide a decouvrir de nouveaux livres en fonction des lectures appreciees par l'utilisateur. Pour ce projet, j'ai egalement developpe une API dediee en ExpressJS afin de renvoyer des recommandations de livres proches de ceux deja lus ou aimes.",
+    technologies: ['Kotlin', 'Node', 'Jetpack Compose', 'ExpressJS'],
     categories: ['mobile', 'backend'],
     features: [
-      "Algorithme de recommandation de similarité développé en Rust",
-      "Interface utilisateur moderne et réactive avec Jetpack Compose",
-      "API REST optimisée pour les calculs de données massives",
-      "Système de cache pour les requêtes fréquentes"
+      "Application Android developpee en Kotlin avec Jetpack Compose",
+      "API REST dediee en ExpressJS",
+      "Recommandation de livres selon les centres d'interet utilisateur",
+      "Architecture separant clairement le mobile et le backend"
     ],
-    challenges: "Le défi majeur a été l'apprentissage du langage Rust pour l'intégrer au backend. Il a fallu assurer une communication fluide entre le moteur de calcul en Rust et l'API en ExpressJS via des appels système performants.",
-    impact: "Ce projet a prouvé ma capacité à monter en compétence sur des langages de bas niveau pour répondre à des besoins de performance critique."
+    challenges: "Le principal défi a ete de maintenir une architecture claire entre application mobile et backend tout en faisant evoluer la logique de recommandation.",
+    impact: "Ce projet m'a permis de progresser fortement en backend ExpressJS et en developpement Android."
   },
   {
     title: 'Bookera',
-    description: "Site web de gestion de bibliothèque personnelle simulant une bibliothèque physique avec intégration d'APIs mondiales.",
-    fullDescription: "Bookera est une plateforme web dédiée aux passionnés de lecture. Le site permet d'organiser sa collection de livres dans une interface visuelle rappelant de vraies étagères. Il agrège les données de Google Books et OpenLibrary pour fournir des fiches détaillées instantanément.",
+    description: "Site web de gestion de bibliothèque personnelle avec interface inspirée d'une bibliothèque physique.",
+    fullDescription: "Bookera est un site web qui permet de gerer les livres deja lus et ceux que l'on souhaite lire. L'interface reprend l'idee d'une bibliotheque physique. Le projet s'appuie sur plusieurs APIs (Google Books, OpenLibrary, etc.) pour recuperer les informations des ouvrages.",
     technologies: ['React', 'Node', 'BootStrap', 'CI/CD', 'Docker'],
     link: 'https://bookera.const-dev.fr',
     categories: ['web'],
     features: [
-      "Interface de bibliothèque interactive et responsive",
-      "Recherche globale via Google Books et OpenLibrary API",
-      "Gestion d'états complexe pour l'organisation des collections",
-      "Déploiement automatisé avec pipeline CI/CD"
+      "Gestion des livres lus et de la liste de lecture",
+      "Integration de plusieurs APIs de donnees de livres",
+      "Interface web inspiree d'une bibliotheque",
+      "Mise en production de l'application en ligne"
     ],
-    challenges: "La complexité résidait dans la gestion des données provenant de multiples sources externes ayant des formats différents, et dans l'optimisation du rendu visuel de la bibliothèque pour les appareils mobiles.",
-    impact: "Déploiement en production réussi, avec une gestion complète du cycle de vie DevOps (hébergement VPS et Docker)."
+    challenges: "Le projet a demande de gerer une application de taille importante, aussi bien en frontend qu'en backend, ainsi que le deploiement et l'automatisation CI/CD.",
+    impact: "Bookera m'a fait gagner en autonomie sur la conception d'applications web completes et sur la partie DevOps."
   },
   {
     title: 'Infrastructure auto-hébergée',
@@ -63,83 +62,83 @@ export const projects: ProjectDetails[] = [
   },
   {
     title: 'Serveur FTP et commande tree',
-    description: "Développement d'un serveur FTP complet et d'un outil de visualisation récursive en Java.",
-    fullDescription: "Projet académique réalisé en 2024 visant à recréer le protocole FTP. Le serveur simule un environnement de stockage distant, tandis que la commande 'tree' développée en parallèle permet de visualiser l'arborescence des fichiers via des algorithmes récursifs.",
+    description: "Projet Java de serveur FTP local et implementation d'une commande tree pour lister l'arborescence distante.",
+    fullDescription: "Projet scolaire realise en 2024. L'objectif etait de creer un serveur FTP en Java ainsi qu'une commande tree permettant de lister les fichiers presents sur le serveur, de la meme maniere que la commande tree sous Linux.",
     technologies: ['Java', 'Maven', 'Sockets'],
     link: 'https://github.com/Andromede-59/FTPServer',
     categories: ['backend'],
     features: [
-      "Implémentation des commandes RFC 959 (LIST, RETR, STOR, etc.)",
-      "Algorithme de parcours d'arbre récursif pour la commande Tree",
-      "Gestion des transferts en mode actif et passif",
-      "Système de gestion de fichiers local simulé"
+      "Simulation d'un serveur FTP local dans un dossier du projet",
+      "Connexion client/serveur pour envoyer et recuperer des fichiers",
+      "Commande tree pour afficher l'arborescence des fichiers distants",
+      "Implementation Java avec build Maven"
     ],
-    challenges: "La gestion des flux de données via les Sockets Java et la synchronisation entre le canal de commande et le canal de données du protocole FTP.",
-    impact: "Renforcement majeur de mes compétences en programmation réseau et en manipulation de structures de données arborescentes."
+    challenges: "Le principal enjeu etait de gerer proprement les echanges reseau et la logique de parcours recursif de l'arborescence distante.",
+    impact: "Ce projet a renforce mes bases en programmation reseau et en manipulation de structures de fichiers."
   },
   {
     title: 'Portfolio',
-    description: "Migration complète d'un portfolio PHP vers une architecture moderne React et Tailwind CSS.",
-    fullDescription: "Refonte totale de mon identité numérique. Initialement développé en PHP, j'ai migré ce portfolio vers React pour bénéficier d'une navigation Single Page Application (SPA) plus fluide et d'une maintenance facilitée via des composants réutilisables.",
+    description: "Migration de mon portfolio de PHP vers React pour un site plus rapide et plus dynamique.",
+    fullDescription: "Ce projet correspond a la mise a jour de mon portfolio personnel. Le site a ete migre de PHP vers React, avec un frontend plus dynamique et une meilleure fluidite de navigation. Le code source est disponible sur GitHub.",
     technologies: ['React', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
     link: 'https://github.com/Andromede-59/Portfolio',
     categories: ['web'],
     features: [
-      "Architecture basée sur des composants fonctionnels React",
-      "Design ultra-rapide et responsive avec Tailwind CSS",
-      "Animations fluides et effets de fond dynamiques",
-      "Routage dynamique pour les pages de détails de projets"
+      "Refonte complete du frontend en React",
+      "Amelioration des performances perçues",
+      "Interface plus dynamique pour la navigation",
+      "Code source versionne sur GitHub"
     ],
-    challenges: "Passer d'un rendu côté serveur (PHP) à un rendu côté client (React) tout en optimisant les performances et l'accessibilité.",
-    impact: "Un site plus moderne, performant et représentatif de mes compétences actuelles en développement front-end."
+    challenges: "Le principal défi a ete de migrer proprement la structure existante PHP vers une base React sans perdre le contenu ni la lisibilite.",
+    impact: "Cette migration a abouti a un portfolio plus rapide, plus moderne et plus simple a faire evoluer."
   },
   {
     title: 'Arbre B (B-Tree)',
-    description: "Implémentation d'une structure de données d'Arbre B en Python avec règles de rééquilibrage.",
-    fullDescription: "Ce projet portait sur la réalisation d'un Arbre B (B-Tree) respectant des contraintes strictes de remaniement. Utilisé massivement dans les bases de données, cet arbre permet de stocker de grandes quantités de données tout en garantissant des temps de recherche logarithmiques.",
+    description: "Projet scolaire Python d'implementation d'un arbre B avec regles strictes de remaniement a l'insertion.",
+    fullDescription: "Projet realise en 2024 durant l'annee scolaire. Le but etait de construire un arbre B en Python avec des contraintes precises lors de l'ajout de nouvelles valeurs, notamment sur la redistribution et le remaniement des noeuds.",
     technologies: ['Python', 'Algorithmes'],
     link: 'https://github.com/Andromede-59/BTreePython',
     categories: ['backend'],
     features: [
-      "Algorithmes d'insertion et de division de nœuds (splitting)",
-      "Recherche optimisée dans des structures de données volumineuses",
-      "Visualisation textuelle de l'arborescence",
-      "Gestion dynamique de l'ordre n de l'arbre"
+      "Insertion de nouvelles valeurs avec remaniement de l'arbre",
+      "Gestion d'un nombre de cles fixe par noeud",
+      "Support des relations parent/enfants avec n+1 enfants",
+      "Implementation complete en Python"
     ],
-    challenges: "L'aspect mathématique du rééquilibrage de l'arbre lors de l'insertion pour maintenir la propriété de hauteur constante.",
-    impact: "Compréhension approfondie du fonctionnement interne des index de bases de données relationnelles."
+    challenges: "Le plus complexe a ete de respecter les regles de reequilibrage a chaque insertion tout en conservant une structure valide.",
+    impact: "Ce projet m'a permis de consolider mes bases en algorithmique et en structures de donnees."
   },
   {
     title: 'Générateur de particules',
-    description: "Simulation physique de particules en JavaScript avec gestion des collisions et de la gravité.",
-    fullDescription: "Développement d'un moteur de rendu de particules sur Canvas. Chaque particule est soumise à des forces physiques réelles : accélération gravitationnelle, frottements et rebonds élastiques lors de collisions avec les bords ou d'autres objets.",
+    description: "Projet JavaScript de generateur de particules paramétrable avec couleurs et physique terrestre.",
+    fullDescription: "Projet scolaire realise en 2024. L'objectif etait de creer un generateur de particules en JavaScript, configurable et capable de produire des particules de differentes couleurs avec un comportement inspire de la physique terrestre.",
     technologies: ['JavaScript', 'HTML5 Canvas', 'Physics'],
     link: 'https://github.com/Andromede-59/II2D_Projet_final',
     categories: ['web'],
     features: [
-      "Moteur physique personnalisé (vecteurs, vélocité, accélération)",
-      "Paramétrage dynamique (couleur, taille, masse des particules)",
-      "Optimisation du rendu pour gérer des centaines d'entités simultanées",
-      "Interaction utilisateur en temps réel"
+      "Generation de particules colorees",
+      "Parametrage du comportement du generateur",
+      "Gestion des collisions et rebonds",
+      "Prise en compte de l'acceleration due a la gravite"
     ],
-    challenges: "Optimiser les boucles d'animation pour maintenir 60 images par seconde (FPS) malgré le nombre croissant de calculs physiques à chaque itération.",
-    impact: "Maîtrise des concepts de mathématiques appliquées au développement front-end et aux simulations graphiques."
+    challenges: "L'equilibre entre fidelite de la simulation et fluidite du rendu a ete le principal point d'attention.",
+    impact: "Ce projet m'a aide a mieux comprendre les simulations physiques simples en JavaScript."
   },
   {
     title: 'Pandemic - LOTR Edition',
-    description: "Adaptation graphique et thématique du jeu Pandemic dans l'univers du Seigneur des Anneaux en Java 3D.",
-    fullDescription: "Projet de binôme consistant à transformer le jeu Pandemic. Nous avons adapté l'intégralité de la logique métier aux Terres du Milieu, remplaçant les maladies par des menaces orques et les villes mondiales par des lieux iconiques comme Minas Tirith ou le Mordor.",
+    description: "Adaptation de Pandemic en binome, version Seigneur des Anneaux, avec simulation et interface 3D en Java.",
+    fullDescription: "Projet scolaire realise en 2022-2023 en binome. Le projet initial consistait a reproduire Pandemic en console, avec un algorithme prenant toujours une decision (souvent menant a la defaite). Nous avons ensuite adapte le jeu a l'univers du Seigneur des Anneaux en renommant les classes selon les races de Tolkien et en remplaçant les 48 villes d'origine par des lieux conformes aux livres.",
     technologies: ['Java', 'OpenGL', 'Swing'],
     link: 'https://github.com/Lucas-Zanardo/University-LOTRPandemic',
     categories: ['backend'],
     features: [
-      "Moteur de rendu 3D avec la bibliothèque OpenGL",
-      "IA simulant la propagation de l'ombre sur la carte",
-      "Système de classes de personnages (Races de Tolkien)",
-      "Logique de jeu multijoueur locale"
+      "Base du jeu d'abord simulee en console",
+      "Classes adaptees aux races de l'univers Tolkien",
+      "Carte revisitée avec 48 lieux inspires du Seigneur des Anneaux",
+      "Ajout d'une interface graphique 3D avec OpenGL"
     ],
-    challenges: "L'intégration d'OpenGL dans une application Java pour créer une interface graphique immersive tout en gérant une logique de jeu complexe.",
-    impact: "Une expérience enrichissante sur le travail d'équipe et la conception de systèmes logiciels complexes alliant backend et rendu graphique."
+    challenges: "L'integration d'une interface 3D OpenGL a la logique existante du jeu a ete la partie la plus exigeante du projet.",
+    impact: "Ce projet m'a fait progresser en travail d'equipe, en Java et en conception de logique de jeu."
   }
 ];
 

@@ -1,14 +1,24 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, Cpu, Layout } from 'lucide-react';
-import { projects, ProjectDetails } from '../data/projects';
+import { ArrowLeft, CheckCircle2, Cpu } from 'lucide-react';
+import { projects, ProjectCategory, ProjectDetails } from '../data/projects';
 import BackgroundEffects from './BackgroundEffects';
 import githubLogo from '../assets/githubLogo.webp';
+import navigateLogo from '../assets/Navigation.webp';
 
 
 export default function ProjectPage() {
   const { title } = useParams<{ title: string }>();
   const navigate = useNavigate();
+  const isGithubLink = (url: string) => url.toLowerCase().includes('github');
+  const featureCardRefs = React.useRef<Array<HTMLDivElement | null>>([]);
+  const [featureCardMinHeight, setFeatureCardMinHeight] = React.useState<number>(0);
+  const categoryLabels: Record<ProjectCategory, { label: string; icon: string }> = {
+    web: { label: 'Web', icon: '🌐' },
+    mobile: { label: 'Mobile', icon: '📱' },
+    backend: { label: 'Backend', icon: '⚙️' },
+    infra: { label: 'Infra', icon: '☁️' }
+  };
 
   // On cherche le projet par son titre (URL encodée)
   const project = projects.find(p => p.title === decodeURIComponent(title || '')) as ProjectDetails;
@@ -33,6 +43,23 @@ export default function ProjectPage() {
     );
   }
 
+  React.useEffect(() => {
+    const updateFeatureCardsHeight = () => {
+      const heights = featureCardRefs.current
+        .map((el) => el?.offsetHeight ?? 0)
+        .filter((height) => height > 0);
+      const maxHeight = heights.length ? Math.max(...heights) : 0;
+      setFeatureCardMinHeight(maxHeight);
+    };
+
+    updateFeatureCardsHeight();
+    window.addEventListener('resize', updateFeatureCardsHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateFeatureCardsHeight);
+    };
+  }, [project]);
+
   return (
     <div className="bg-background min-h-screen relative overflow-hidden">
       <BackgroundEffects />
@@ -52,7 +79,7 @@ export default function ProjectPage() {
           <div className="flex flex-wrap gap-2 mb-6">
             {project.categories.map((cat) => (
               <span key={cat} className="px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium flex items-center gap-2 capitalize">
-                <Layout className="w-3.5 h-3.5" /> {cat}
+                {categoryLabels[cat].icon} {categoryLabels[cat].label}
               </span>
             ))}
           </div>
@@ -74,11 +101,11 @@ export default function ProjectPage() {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white rounded-xl hover:shadow-xl hover:shadow-primary/40 transition-all font-semibold active:scale-95"
               >
                 <img 
-                    src={githubLogo} 
-                    alt="GitHub" 
-                    className="w-5 h-5 sm:w-6 sm:h-6 object-contain brightness-125 invert opacity-70 hover:opacity-100" 
+                    src={isGithubLink(project.link) ? githubLogo : navigateLogo}
+                    alt={isGithubLink(project.link) ? 'GitHub' : 'Go to website'}
+                    className={`${isGithubLink(project.link) ? 'w-5 h-5 sm:w-6 sm:h-6' : 'w-6 h-6 sm:w-7 sm:h-7'} object-contain brightness-125 invert opacity-70 hover:opacity-100`} 
                     />
-                Voir sur GitHub
+                {isGithubLink(project.link) ? 'Voir sur GitHub' : 'Voir le projet'}
               </a>
             )}
           </div>
@@ -111,8 +138,15 @@ export default function ProjectPage() {
               <h2 className="text-2xl font-bold mb-6 text-foreground">Fonctionnalités Clés</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {project.features.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-card/30 border border-border/50 rounded-xl hover:border-primary/30 transition-all">
-                    <CheckCircle2 className="text-primary w-5 h-5 mt-0.5 shrink-0" />
+                  <div
+                    key={index}
+                    ref={(el) => {
+                      featureCardRefs.current[index] = el;
+                    }}
+                    style={{ minHeight: featureCardMinHeight ? `${featureCardMinHeight}px` : undefined }}
+                    className="flex items-center gap-3 p-4 bg-card/30 border border-border/50 rounded-xl hover:border-primary/30 transition-all"
+                  >
+                    <CheckCircle2 className="text-primary w-5 h-5 shrink-0" />
                     <span className="text-muted-foreground text-sm sm:text-base">{feature}</span>
                   </div>
                 ))}

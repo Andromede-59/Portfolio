@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import githubLogo from '../assets/githubLogo.webp';
+import navigateLogo from '../assets/Navigation.webp';
 import type { FilterCategory, ProjectDetails, ProjectCategory } from '../data/projects';
 import { Link } from 'react-router-dom';
 
@@ -29,7 +30,6 @@ export default function ProjectsSection({ projects, selectedCategory, onSelectCa
     ? allFiltered.slice(0, 4)
     : allFiltered;
 
-  // 3. On s'assure que le record utilise ProjectCategory pour les clés (sauf 'all')
   const categoryLabels: Record<ProjectCategory, { label: string; icon: string }> = {
     web: { label: 'Web', icon: '🌐' },
     mobile: { label: 'Mobile', icon: '📱' },
@@ -88,7 +88,7 @@ export default function ProjectsSection({ projects, selectedCategory, onSelectCa
                     </h3>
                   </div>
 
-                  {project.link && (
+                  {project.link && project.link.includes('github') && (
                     <a
                       href={project.link}
                       target="_blank"
@@ -101,6 +101,22 @@ export default function ProjectsSection({ projects, selectedCategory, onSelectCa
                         src={githubLogo} 
                         alt="GitHub" 
                         className="w-5 h-5 sm:w-6 sm:h-6 object-contain brightness-125 invert opacity-70 hover:opacity-100" 
+                      />
+                    </a>
+                  )}
+
+                  {project.link && !project.link.includes('github') && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-muted-foreground hover:text-primary transition-colors flex-shrink-0 z-10"
+                    >
+                      <img 
+                        src={navigateLogo}
+                        alt="Go to website"
+                        className="w-6 h-6 sm:w-7 sm:h-7 object-contain brightness-125 invert opacity-70 hover:opacity-100" 
                       />
                     </a>
                   )}
