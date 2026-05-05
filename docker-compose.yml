@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   portfolio:
     build: .
@@ -10,7 +9,7 @@ services:
       - PORT=${PORT}
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portfolio.rule=Host(`portfolio.const-dev.fr`)"
+      - "traefik.http.routers.portfolio.rule=Host(`julien.mattot.fr`)"
       - "traefik.http.routers.portfolio.entrypoints=web"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
     networks:
