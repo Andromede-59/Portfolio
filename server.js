@@ -7,6 +7,8 @@ const multer = require('multer');
 require('dotenv').config();
 
 const app = express();
+const CANONICAL_HOST = 'julien.mattot.fr';
+const CANONICAL_ORIGIN = `https://${CANONICAL_HOST}`;
 
 // app.use(cors());
 app.use(bodyParser.json());
@@ -16,12 +18,36 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 const upload = multer();
 
-app.get('/', (req, res) => {
+app.set('trust proxy', true);
+
+app.use((req, res, next) => {
+	if (process.env.NODE_ENV !== 'production') {
+		return next();
+	}
+
+	const forwardedHost = req.headers['x-forwarded-host'];
+	const host = (typeof forwardedHost === 'string' && forwardedHost) || req.headers.host;
+
+	if (!host) {
+		return next();
+	}
+
+	const normalizedHost = host.split(':')[0].toLowerCase();
+	if (normalizedHost !== CANONICAL_HOST) {
+		return res.redirect(301, `${CANONICAL_ORIGIN}${req.originalUrl}`);
+	}
+
+	return next();
+});
+
+app.get('/health', (req, res) => {
 	res.status(200).send('Healthcheck passed');
 });
 
-app.get("/sitemap.xml", (req, res) => {
-	res.sendFile(path.join(__dirname, "sitemap.xml"));
+app.use('/projects', (req, res, next) => {
+	res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+	res.setHeader('Link', `<${CANONICAL_ORIGIN}/>; rel="canonical"`);
+	next();
 });
 
 app.get(/.*/, (req, res) => {
