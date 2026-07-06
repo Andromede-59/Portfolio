@@ -16,18 +16,18 @@ export interface ProjectDetails {
 export const projects: ProjectDetails[] = [
   {
     title: 'BookAdviser',
-    description: "Application Android de découverte de livres basée sur les centres d'intérêt, avec une API développée en ExpressJS.",
-    fullDescription: "Projet mené sur l'année 2025. BookAdviser est une application Android qui aide a decouvrir de nouveaux livres en fonction des lectures appreciees par l'utilisateur. Pour ce projet, j'ai egalement developpe une API dediee en ExpressJS afin de renvoyer des recommandations de livres proches de ceux deja lus ou aimes.",
-    technologies: ['Kotlin', 'Node', 'Jetpack Compose', 'ExpressJS'],
+    description: "Application Android de découverte de livres basée sur les centres d'intérêt, avec une API développée en Python.",
+    fullDescription: "Projet mené sur les années 2025 et 2026. BookAdviser est une application Android qui aide a decouvrir de nouveaux livres en fonction des lectures appreciees par l'utilisateur. Pour ce projet, j'ai egalement developpe une API dediee en Python afin de renvoyer des recommandations de livres proches de ceux deja lus ou aimes.",
+    technologies: ['Kotlin', 'Node', 'Jetpack Compose', 'Python'],
     categories: ['mobile', 'backend'],
     features: [
-      "Application Android developpee en Kotlin avec Jetpack Compose",
-      "API REST dediee en ExpressJS",
+      "Application Android développée en Kotlin avec Jetpack Compose",
+      "API REST dediee en Python via FastAPI",
       "Recommandation de livres selon les centres d'interet utilisateur",
-      "Architecture separant clairement le mobile et le backend"
+      "Architecture séparant clairement le mobile et le backend"
     ],
     challenges: "Le principal défi a ete de maintenir une architecture claire entre application mobile et backend tout en faisant evoluer la logique de recommandation.",
-    impact: "Ce projet m'a permis de progresser fortement en backend ExpressJS et en developpement Android."
+    impact: "Ce projet m'a permis de progresser fortement en developpement Android ainsi qu'en optimisation de code."
   },
   {
     title: 'Bookera',
