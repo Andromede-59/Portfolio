@@ -1,6 +1,6 @@
 import React from 'react';
 import myAvatar from '../assets/myAvatar.webp';
-import generixLogo from '../assets/generix_logo.webp';
+import bkLogo from '../assets/logo-bk.webp';
 
 export default function AboutSection() {
   return (
