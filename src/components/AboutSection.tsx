@@ -51,8 +51,8 @@ export default function AboutSection() {
             </div>
             <div className="absolute -bottom-3 right-4 md:bottom-2 md:right-2 bg-card border-2 border-primary rounded-full overflow-hidden shadow-lg w-16 h-16">
               <img 
-                src={generixLogo}
-                alt="Generix Logo" 
+                src={bkLogo}
+                alt="BattleKart Logo" 
                 width={64} 
                 height={64} 
                 fetchPriority="high"
