@@ -17,7 +17,7 @@ export default function HeroSection({ onViewProjects, onContact }: HeroSectionPr
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
               </span>
-              Actuellement en poste chez <span className="font-semibold text-accent">Generix</span>
+              Actuellement en poste chez <span className="font-semibold text-accent">BattleKart</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent font-bold tracking-tight">
